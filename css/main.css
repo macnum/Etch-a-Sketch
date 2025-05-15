@@ -26,8 +26,15 @@ header {
 .main .grid-container{
     background-color: #fff;
     display: flex;
-    width: 760px;
-    height: 660px;
-    height: 560px;
-    border: 5px solid black;
+    width: 703px;  /* Add an extra 3 unit due rounding error*/
+    height: 600px;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+    
+}
+.grid {
+    border: .1px solid black;
 }
