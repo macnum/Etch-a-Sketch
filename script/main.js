@@ -32,8 +32,9 @@ function getNumberOfBox() {
 }
 
 
-btn.addEventListener('click', () => {
+btn.addEventListener('click', (e) => {
     gridContainer.textContent = "";
+    if (!e.target.matches('div button')) return;
     createGrid();
 
     gridContainer.addEventListener('mouseover', (e) => {
