@@ -1,15 +1,13 @@
 const gridContainer = document.querySelector('.grid-container');
+const btn = document.querySelector("div.button");
 
-let numberOfBoxes = 5;
-const containerWidth = 700;
-const containerHeight = 600;
-
-const gridWidth = containerWidth / numberOfBoxes;
-const gridHeight = containerHeight / numberOfBoxes;
-
-
-createGrid()
 function createGrid() {
+    const containerWidth = 700;
+    const containerHeight = 600;
+    numberOfBoxes = getNumberOfBox();
+    const gridWidth = containerWidth / numberOfBoxes;
+    const gridHeight = containerHeight / numberOfBoxes;
+
     for (let i = 1; i <= numberOfBoxes; i++) {
         for (let j = 1; j <= numberOfBoxes; j++) {
             const grid = document.createElement("div")
@@ -22,13 +20,30 @@ function createGrid() {
 
     }
 }
-let i = 0
-gridContainer.addEventListener('mouseover', (e) => {
-    const elem = e.target;
-    if (!elem.matches('div.grid')) return;
+function getNumberOfBox() {
+    let number = prompt("Enter a number btw 1 and 100");
+    if (number <= 100 && number >= 1) {
+        number = Number(number)
+    } else {
+        alert("Try again");
+        return;
+    }
+    return number;
+}
 
-    showHoverEffect(elem)
+
+btn.addEventListener('click', () => {
+    gridContainer.textContent = "";
+    createGrid();
+
+    gridContainer.addEventListener('mouseover', (e) => {
+        const elem = e.target;
+        if (!elem.matches('div.grid')) return;
+
+        showHoverEffect(elem)
+    })
 })
+
 
 function showHoverEffect(gridItem) {
     gridItem.classList.add('hover');
