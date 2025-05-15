@@ -41,6 +41,7 @@ header {
 }
 .grid {
     border: .1px solid #e0e0e04d;
+    border-radius: 4px;
 }
 
 .hover {
