@@ -1,6 +1,6 @@
 const gridContainer = document.querySelector('.grid-container');
 
-let numberOfBoxes = 79;
+let numberOfBoxes = 5;
 const containerWidth = 700;
 const containerHeight = 600;
 
@@ -21,4 +21,15 @@ function createGrid() {
         }
 
     }
+}
+let i = 0
+gridContainer.addEventListener('mouseover', (e) => {
+    const elem = e.target;
+    if (!elem.matches('div.grid')) return;
+
+    showHoverEffect(elem)
+})
+
+function showHoverEffect(gridItem) {
+    gridItem.classList.add('hover');
 }

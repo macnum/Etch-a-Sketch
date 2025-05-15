@@ -36,5 +36,9 @@ header {
     
 }
 .grid {
-    border: .1px solid black;
+    border: .1px solid rgb(224, 224, 224);
+}
+
+.hover {
+    background-color: #222;
 }
