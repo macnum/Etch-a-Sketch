@@ -32,7 +32,7 @@ header {
     display: flex;
     width: 703px;  /* Add an extra 3 unit due rounding error*/
     height: 600px;
-    border: 1px solid black;
+    border: 1px solid #b9b9b999;
     display: flex;
     flex-wrap: wrap;
    justify-content: center;
@@ -40,7 +40,7 @@ header {
     
 }
 .grid {
-    border: .1px solid rgb(224, 224, 224);
+    border: .1px solid #e0e0e04d;
 }
 
 .hover {
